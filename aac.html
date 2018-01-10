@@ -1,0 +1,207 @@
+<html> 
+ 
+<head> 
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Al-amin's Care </title>
+
+<style>
+body{background-color:#161616;}
+</style>
+
+<!-- dropdown menu start -->
+
+<style>
+
+.navbar {
+    overflow: hidden;
+    background-color: red;
+    font-family: Arial;
+}
+
+.navbar a {
+    float: left;
+    font-size: 30px;
+    color: yellow;
+    text-align: center;
+    padding: 16px 21px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 30px;    
+    border: none;
+    outline: none;
+    color: yellow;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #b70909;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: red;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: yellow;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #b70909;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+
+<!-- dropdown menu end -->
+
+<!-- images loop start -->
+<style>
+.NDUB {display:none;}
+</style>
+
+<!-- images loop end -->
+
+<!-- date & clock code start -->
+
+<script type="text/javascript">
+tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+
+<!-- date & clock code end -->
+
+</head>
+<body>
+
+<center> <img rel=" abc " src="images/abc.png" style="background-color:black;width:375px;height:250px;" /> </center>
+
+<h1 style="text-align:center;background-color:black;"> <font size="13" color="YELLOW"> <b> Al-amin's Care </b> </font> </h1>
+
+<!-- date & clock code start -->
+
+<div style="text-align:right;background-color:red;color:yellow;" id="clockbox"></div>
+
+<!-- date & clock code end -->
+
+<marquee direction="left" style="color:yellow;background-color:black;"> <font size="5"> নোটিস  : আগামী কাল গণিত পরীক্ষা অনুষ্ঠিত হইবে  </font> </marquee>
+
+
+<!-- dropdown menu start -->
+
+<div class="navbar"> 
+  <a href="#home">HOME</a>
+  <a href="#news">ABOUT</a>
+
+  <div class="dropdown">
+    <button class="dropbtn"> EMPLOYEE </button>
+    <div class="dropdown-content">
+      <a href="#">ADMIN</a>
+      <a href="#">MANAGER</a>
+      <a href="#">ACCOUNTENT</a>
+    </div>
+  </div> 
+
+<div class="dropdown">
+    <button class="dropbtn"> STUDENT </button>
+    <div class="dropdown-content">
+      <a href="#">SSC</a>
+      <a href="#">HSC</a>
+      <a href="#">HONOURS</a>
+    </div>
+  </div> 
+
+  <a href="#news">TEACHER</a>
+
+<div class="dropdown">
+    <button class="dropbtn">  SUBJECT  </button>
+    <div class="dropdown-content">
+      <a href="#">SSC</a>
+      <a href="#">HSC</a>
+      <a href="#">HONOURS</a>
+    </div>
+  </div> 
+
+   <a href="#news">CONTACT</a>
+</div>
+
+<!-- dropdown menu end -->
+
+<!-- images loop start -->
+
+<div  style="max-width:500px">
+
+<img class="NDUB" src="images/a.png" style="width:1332px;height:325px">
+
+<img class="NDUB" src="images/b.jpg" style="width:1332px;height:325px">
+
+<img class="NDUB" src="images/c.jpg" style="width:1332px;height:325px">
+
+</div>
+
+<script>
+var myIndex = 0;
+NDUBphotos();
+
+function NDUBphotos() {
+    var i;
+    var x = document.getElementsByClassName("NDUB");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(NDUBphotos, 3000); // Change image every 2 seconds
+}
+</script>
+
+<!-- images loop end -->
+
+</body>
+</html>
